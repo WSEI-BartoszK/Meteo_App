@@ -1,0 +1,13 @@
+D:\WSEI\C#\Meteo_App\bin\Debug\netcoreapp3.1\Meteo_App.exe
+D:\WSEI\C#\Meteo_App\bin\Debug\netcoreapp3.1\Meteo_App.deps.json
+D:\WSEI\C#\Meteo_App\bin\Debug\netcoreapp3.1\Meteo_App.runtimeconfig.json
+D:\WSEI\C#\Meteo_App\bin\Debug\netcoreapp3.1\Meteo_App.runtimeconfig.dev.json
+D:\WSEI\C#\Meteo_App\bin\Debug\netcoreapp3.1\Meteo_App.dll
+D:\WSEI\C#\Meteo_App\bin\Debug\netcoreapp3.1\Meteo_App.pdb
+D:\WSEI\C#\Meteo_App\obj\Debug\netcoreapp3.1\Meteo_App.csprojAssemblyReference.cache
+D:\WSEI\C#\Meteo_App\obj\Debug\netcoreapp3.1\Meteo_App.AssemblyInfoInputs.cache
+D:\WSEI\C#\Meteo_App\obj\Debug\netcoreapp3.1\Meteo_App.AssemblyInfo.cs
+D:\WSEI\C#\Meteo_App\obj\Debug\netcoreapp3.1\Meteo_App.csproj.CoreCompileInputs.cache
+D:\WSEI\C#\Meteo_App\obj\Debug\netcoreapp3.1\Meteo_App.dll
+D:\WSEI\C#\Meteo_App\obj\Debug\netcoreapp3.1\Meteo_App.pdb
+D:\WSEI\C#\Meteo_App\obj\Debug\netcoreapp3.1\Meteo_App.genruntimeconfig.cache
