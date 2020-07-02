@@ -11,8 +11,9 @@ namespace Aplikacja_Pogodowa
             Console.WriteLine("Wybierz pozycję z menu [1-3]: ");
             Console.WriteLine(" ");
             Console.WriteLine("1: Sprawdź pogodę (https://danepubliczne.imgw.pl/)");
-            Console.WriteLine("2: O autorze");
-            Console.WriteLine("3: Zakończ Aplikacje");
+            Console.WriteLine("2: Lista dostępnych miast");
+            Console.WriteLine("3: O autorze");
+            Console.WriteLine("4: Zakończ Aplikacje");
             Spacer();
         }
         static void Spacer()
@@ -55,14 +56,19 @@ namespace Aplikacja_Pogodowa
                 // check if is number
                 if (!Int32.TryParse(userChoice, out userInput)) continue;
 
-                if (userChoice == "3")
+                if (userChoice == "4")
                 {
                     Environment.Exit(0);
                 }
 
-                if (userChoice == "2")
+                if (userChoice == "3")
                 {
                     CreatedBy();
+                }
+
+                if (userChoice == "2")
+                {
+                    Console.WriteLine("To be added");
                 }
 
                 if (userChoice == "1")
