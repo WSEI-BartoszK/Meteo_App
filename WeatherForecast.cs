@@ -6,24 +6,24 @@ using System.Text.Json;public class WeatherForecast
 
     public string RequestUrl {get; set;}
     
-    JsonPropertyName("id_stacji")
+    [JsonPropertyName("id_stacji")]
     public string WSID {get; set;}
-    JsonPropertyName("stacja")
+    [JsonPropertyName("stacja")]
     public string CityName {get; set;}
-    JsonPropertyName("data_pomiaru")
+    [JsonPropertyName("data_pomiaru")]
     public string Date {get; set;}
-    JsonPropertyName("godzina_pomiaru")
+    [JsonPropertyName("godzina_pomiaru")]
     public string Hour {get; set;}
-    JsonPropertyName("temperatura")
+    [JsonPropertyName("temperatura")]
     public string Temperature {get; set;}
-    JsonPropertyName("predkosc_wiatru")
+    [JsonPropertyName("predkosc_wiatru")]
     public string WindSpeed {get; set;}
-    JsonPropertyName("kierunek_wiatru")
+    [JsonPropertyName("kierunek_wiatru")]
     public string WindDir{get; set;}
-    JsonPropertyName("wilgotnosc_wzgledna")
+    [JsonPropertyName("wilgotnosc_wzgledna")]
     public string Humidity {get; set;}
-    JsonPropertyName("suma_opadu")
+    [JsonPropertyName("suma_opadu")]
     public string Rainfall {get; set;}
-    JsonPropertyName("cisnienie")
+    [JsonPropertyName("cisnienie")]
     public string Pressure {get; set;}
 }

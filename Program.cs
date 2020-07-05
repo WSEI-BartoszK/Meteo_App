@@ -8,7 +8,7 @@ namespace Aplikacja_Pogodowa
         static void MenuItems()
         {
             Spacer();
-            Console.WriteLine("Wybierz pozycję z menu [1-3]: ");
+            Console.WriteLine("Wybierz pozycję z menu [1-4]: ");
             Console.WriteLine(" ");
             Console.WriteLine("1: Sprawdź pogodę (https://danepubliczne.imgw.pl/)");
             Console.WriteLine("2: Lista dostępnych miast");
@@ -35,6 +35,36 @@ namespace Aplikacja_Pogodowa
         {
             Console.Write("Naciśni dowolny klawisz.");
             Console.ReadKey();
+            Spacer();
+        }
+        #endregion
+        
+        #region MeteoResponse
+        static void MeteoResponse(WeatherForecast weatherForecast)
+        {
+            Console.WriteLine(" ");
+            if (weatherForecast.IsSuccess == 1)
+            {
+                Console.WriteLine("Request URL: " + weatherForecast.RequestUrl);
+                Console.WriteLine("id_stacji: " + weatherForecast.WSID);
+                Console.WriteLine("stacja: " + weatherForecast.CityName);
+                Console.WriteLine("data_pomiaru: " + weatherForecast.Date);
+                Console.WriteLine("godzina_pomiaru: " + weatherForecast.Hour);
+                Console.WriteLine("temperatura: " + weatherForecast.Temperature);
+                Console.WriteLine("predkosc_wiatru: " + weatherForecast.WindSpeed);
+                Console.WriteLine("kierunek_wiatru: " + weatherForecast.WindDir);
+                Console.WriteLine("wilgotnosc_wzgledna: " + weatherForecast.Humidity);
+                Console.WriteLine("suma_opadu: " + weatherForecast.Rainfall);
+                Console.WriteLine("cisnienie: " + weatherForecast.Pressure);
+            }
+            else if (weatherForecast.IsSuccess == 0)
+            {
+                Console.WriteLine("[!] error: " + weatherForecast.ErrorMessage);
+            }
+            else
+            {
+                Console.WriteLine("[!] unknown error" + weatherForecast.ErrorMessage);
+            }
             Spacer();
         }
         #endregion
@@ -73,12 +103,14 @@ namespace Aplikacja_Pogodowa
 
                 if (userChoice == "1")
                 {
-                    Console.Write("Enter city name: ");
+                    Console.Clear();
+                    Spacer();
+                    Console.Write("Podaj nazwę miasta: ");
                     city_name = Console.ReadLine();
 
                     Console.WriteLine("To be added");
 
-                    Spacer();
+                    MeteoResponse(Meteo.GetData(city_name));
 
 
                 }
