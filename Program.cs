@@ -8,7 +8,7 @@ namespace Aplikacja_Pogodowa
         static void MenuItems()
         {
             Spacer();
-            Console.WriteLine("Wybierz pozycję z menu [1-4]: ");
+            Console.WriteLine("Pozycję w menu: ");
             Console.WriteLine(" ");
             Console.WriteLine("1: Sprawdź pogodę (https://danepubliczne.imgw.pl/)");
             Console.WriteLine("2: Lista dostępnych miast");
@@ -80,7 +80,7 @@ namespace Aplikacja_Pogodowa
             {
                 MenuItems();
 
-                Console.Write("Wybierz pozycję z menu: ");
+                Console.Write("Wybierz pozycję z menu [1-4]: ");
                 userChoice = Console.ReadLine();
 
                 // check if is number
@@ -105,10 +105,8 @@ namespace Aplikacja_Pogodowa
                 {
                     Console.Clear();
                     Spacer();
-                    Console.Write("Podaj nazwę miasta: ");
+                    Console.Write("Podaj nazwę miasta bez spacji i polskich znaków [np. ZielonaGora]: ");
                     city_name = Console.ReadLine();
-
-                    Console.WriteLine("To be added");
 
                     MeteoResponse(Meteo.GetData(city_name));
 
