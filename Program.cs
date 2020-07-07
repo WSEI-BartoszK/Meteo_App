@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Aplikacja_Pogodowa
 {
@@ -30,6 +31,19 @@ namespace Aplikacja_Pogodowa
             Console.WriteLine("Grupa lab8/1/IEN");
             Console.WriteLine("Index 12494");
             Spacer();
+        }
+        static void MenuGetAllCities()
+        {
+            Console.Clear();
+            Spacer();   
+            List<WeatherForecast> cities =  Meteo.GetAllCities();
+            
+            foreach(WeatherForecast city in cities)
+            {
+                Console.WriteLine("Miasto: " + city.CityName);
+            }
+
+            Spacer();         
         }
         static void Anykey()
         {
@@ -98,7 +112,7 @@ namespace Aplikacja_Pogodowa
 
                 if (userChoice == "2")
                 {
-                    Console.WriteLine("To be added");
+                    MenuGetAllCities();
                 }
 
                 if (userChoice == "1")

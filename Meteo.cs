@@ -8,7 +8,7 @@ class Meteo
     // based on https://danepubliczne.imgw.pl/
     // sample usage: https://danepubliczne.imgw.pl/api/data/synop/station/krakow
     private const string BaseUrl = "https://danepubliczne.imgw.pl/api/data/synop/station/";
-    private const string AllCitiesURL = "https://danepubliczne.imgw.dpl/api/data/synop";
+    private const string AllCitiesURL = "https://danepubliczne.imgw.pl/api/data/synop";
 
     public static string UrlCreator(string city_name)
     {
