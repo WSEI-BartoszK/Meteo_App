@@ -47,7 +47,7 @@ namespace Aplikacja_Pogodowa
         }
         static void Anykey()
         {
-            Console.Write("Naciśni dowolny klawisz.");
+            Console.Write("Naciśni dowolny klawisz by wrócić do Menu.");
             Console.ReadKey();
             Spacer();
         }
@@ -73,11 +73,13 @@ namespace Aplikacja_Pogodowa
             }
             else if (weatherForecast.IsSuccess == 0)
             {
-                Console.WriteLine("[!] error: " + weatherForecast.ErrorMessage);
+                Console.WriteLine("[!] error:");
+                Console.WriteLine("Sprawdź czy miasto jest na liście - Menu [2].");
+                Console.WriteLine("Lub sprwadź czy podałeś nazwę miasta poprawnie: bez spacji i polskich znaków.");
             }
             else
             {
-                Console.WriteLine("[!] unknown error" + weatherForecast.ErrorMessage);
+                Console.WriteLine("[!] Unknown Error" + weatherForecast.ErrorMessage);
             }
             Spacer();
         }
